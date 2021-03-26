@@ -23,5 +23,13 @@ const apiConfig = {
         port: 3000
     }
 }
-module.exports = {config, apiConfig}
+const exportExcel= {
+    exportExcel: {
+        nombre: 'nombre',
+        apellido: 'apellido',
+        ciudad: 'ciudad',
+        edad: 'edad'
+    }
+}
+module.exports = {config, apiConfig, exportExcel}
 

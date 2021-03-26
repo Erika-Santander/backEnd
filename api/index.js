@@ -8,6 +8,7 @@ const cors = require('cors')
 const {apiConfig} = require('configuracion')
 const userRoute = require('./rutas/user')
 const personRoute = require('./rutas/persona')
+const cargarRoute = require('./rutas/carga')
 
 const app = asyncify(express())
 let server
@@ -16,6 +17,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/usuario',userRoute)
 app.use('/persona',personRoute)
+app.use('/import',cargarRoute)
 
 app.use((err, req, res, next) => {
     if (err.code === 'permission_denied') {
